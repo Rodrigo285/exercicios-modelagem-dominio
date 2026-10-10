@@ -85,3 +85,25 @@ test("Deve retornar false para para o email incorreto", () => {
   const email = Validador.isEmailValido("borgesrodrigo2024@outlook");
   expect(email).toBe(false);
 });
+
+test("Deve combinar os erros", () => {
+  const erros = Validador.combinar(
+    Validador.naoVazio("", "erro1"),
+    Validador.naoVazio("", "erro2"),
+    Validador.naoVazio("", "erro3"),
+    Validador.naoVazio("Teste", "nao erro4"),
+    Validador.naoVazio("", "erro"),
+  );
+
+  expect(erros?.join(", ")).toBe("erro1, erro2, erro3, erro");
+});
+
+test("Deve combinar sem  erros", () => {
+  const erros = Validador.combinar(
+    Validador.naoVazio("Bom dia", "erro1"),
+    Validador.naoVazio("Boa tarde", "erro2"),
+    Validador.naoVazio("Boa noite", "erro3"),
+  );
+
+  expect(erros).toBe(null);
+});
