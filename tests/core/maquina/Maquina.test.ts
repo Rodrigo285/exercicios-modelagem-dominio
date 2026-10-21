@@ -3,7 +3,7 @@ import { TipoMaquina } from "../../../src/core/maquina/TipoMaquina";
 import TagMaquina from "../../../src/core/shared/TagMaquina";
 
 test("Deve retornar um obejto de maquina valido", () => {
-  const tag = new TagMaquina("IJ-0305");
+  const tag = TagMaquina.create("IJ-0305");
   const injetora = {
     tag: tag,
     tipo: TipoMaquina.INJETORA,
@@ -17,7 +17,7 @@ test("Deve retornar um obejto de maquina valido", () => {
 });
 
 // test("Deve retornar um obejto invalido", () => {
-//   const tag = new TagMaquina("");
+//   const tag = new TagMaquina.create("");
 //   const injetora = {
 //     tag: tag,
 //     tipo: "Injetora",

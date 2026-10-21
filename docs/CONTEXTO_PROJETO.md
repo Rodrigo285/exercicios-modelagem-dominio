@@ -90,7 +90,7 @@ Representa uma máquina física da empresa.
 
 Propriedades atuais:
 
-- TagMaquina
+- TagMaquina.create
 - TipoMaquina
 - Marca
 - Modelo
@@ -153,7 +153,7 @@ Perfis:
 
 ## Value Objects
 
-### TagMaquina
+### TagMaquina.create
 
 Identificador único da máquina.
 

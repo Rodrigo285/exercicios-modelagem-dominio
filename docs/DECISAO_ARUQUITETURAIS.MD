@@ -1,7 +1,7 @@
 04/10/2026
 
 Decisão:
-TagMaquina será Value Object.
+TagMaquina.create será Value Object.
 
 Motivo:
 A TAG identifica unicamente uma máquina.
