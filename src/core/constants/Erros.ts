@@ -1,3 +1,5 @@
+import Email from "../shared/Email";
+
 const Erros = {
   CPF_INVALIDO: "CPF_INVALIDO",
   ID_INVALIDO: "ID_INVALIDO",
@@ -9,6 +11,7 @@ const Erros = {
   SENHA_INVALIDA: "SENHA_INVALIDA",
   TAG_INVALIDA: "TAG_INVALIDA",
   PORCENTAGEM_INVALIDA: "PORCENTAGEM_INVALIDA",
+  EMAIL_INVALIDO: "EMAIL_INVALIDO",
 } as const;
 
 export default Erros;
