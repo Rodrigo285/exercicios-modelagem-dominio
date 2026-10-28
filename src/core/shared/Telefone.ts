@@ -2,7 +2,7 @@ import Validador from "../utils/Validador";
 import Erros from "../constants/Erros";
 
 export default class Telefone {
-  static readonly REGEX = /^\(?\d{2}\)?\s?9?\d{4}-?\d{4}$/;
+  static readonly REGEX = /^\(?\d{2}\)?9\d{4}-?\d{4}$/;
   readonly valor: string;
 
   private constructor(valor: string) {
@@ -14,7 +14,7 @@ export default class Telefone {
   }
 
   static create(numero: string): Telefone {
-    return Telefone.create(numero);
+    return new Telefone(numero);
   }
 
   static telIsValido(numero: string): boolean {
