@@ -8,14 +8,13 @@ export default class Telefone {
   private constructor(valor: string) {
     const numeroNormalizado = valor.trim();
 
-    if (!Telefone.telIsValido(numeroNormalizado))
-      throw new Error(Erros.TELEFONE_INVALIDO);
+    if (!Telefone.telIsValido(numeroNormalizado)) throw new Error(Erros.TELEFONE_INVALIDO);
 
     this.valor = numeroNormalizado;
   }
 
   static create(numero: string): Telefone {
-    return new Telefone(numero);
+    return Telefone.create(numero);
   }
 
   static telIsValido(numero: string): boolean {
